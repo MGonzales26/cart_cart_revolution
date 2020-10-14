@@ -49,4 +49,16 @@ class ShoppingCart
       product.quantity
     end.reverse
   end
+
+  def product_breakdown
+    breakdown = {}
+    @products.map do |product|
+      if breakdown[product.category] == nil
+      breakdown[product.category] = [product]
+      else
+        breakdown[product.category] = (breakdown[product.category] << product)
+      end
+    end
+    breakdown
+  end
 end
