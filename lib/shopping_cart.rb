@@ -17,4 +17,20 @@ class ShoppingCart
       capacity: @capacity
     }
   end
+
+  def total_number_of_products
+    sum = 0
+    @products.map do |product|
+      sum += product.quantity
+    end
+    sum
+  end
+
+  def is_full?
+    if total_number_of_products > @capacity
+      true
+    else
+      false
+    end
+  end
 end
