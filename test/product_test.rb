@@ -10,25 +10,25 @@ class ProductTest < Minitest::Test
   end
 
   def test_it_has_a_category
-    skip
+    # skip
     product = Product.new(:paper, 'toilet paper', 3.70, '10')
     assert_equal :paper, product.category
   end
 
   def test_it_has_a_name
-    skip
+    # skip
     product = Product.new(:paper, 'toilet paper', 3.70, '10')
     assert_equal 'toilet paper', product.name
   end
 
   def test_it_has_a_unit_price
-    skip
+    # skip
     product = Product.new(:paper, 'toilet paper', 3.70, '10')
     assert_equal 3.70, product.unit_price
   end
 
   def test_it_has_a_quantity
-    skip
+    # skip
     product = Product.new(:paper, 'toilet paper', 3.70, '10')
     assert_equal 10, product.quantity
   end
