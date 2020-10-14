@@ -42,4 +42,14 @@ class ShoppingCartTest < Minitest::Test
 
     assert_equal expected, cart.products
   end
+
+  def test_it_can_show_details
+    cart = ShoppingCart.new("King Soopers", "30items")
+
+    expected = {
+      name: "King Soopers",
+      capacity: 30
+    }
+    assert_equal expected, cart.details
+  end
 end
